@@ -181,14 +181,11 @@ import {
   Platform,
   PermissionsAndroid,
   AppState,
-  Alert,
 } from 'react-native';
 import {
   PERMISSIONS,
   RESULTS,
   check,
-  request,
-  openSettings,
 } from 'react-native-permissions';
 import Geolocation from 'react-native-geolocation-service';
 
@@ -269,6 +266,7 @@ export const LocationPermissionProvider = ({
 
   useEffect(() => {
     checkAndRequestPermission();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
